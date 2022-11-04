@@ -76,7 +76,7 @@ export const updatePost = async (req, res) => {
 }
 
 //Delete post
-export const deletePOst = async (req, res) => {
+export const deletePost = async (req, res) => {
     try {
         const post = await Post.findById(req.params.id)
         if (post.username === req.body.username) {
