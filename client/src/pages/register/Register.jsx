@@ -1,4 +1,6 @@
 import React from 'react'
+import Login from '../login/Login'
+import { Link } from 'react-router-dom'
 
 const Register = () => {
   return (
@@ -17,7 +19,9 @@ const Register = () => {
                 </div>
                 <button className='mt-7 py-2.5 px-5 mb-2 text-sm font-medium border-gray-600 border-[1px] rounded-md hover:bg-gray-600 hover:text-white'>Register</button>
             </form>
-            <a href="">Already have an account</a>
+            <Link to={"/login"}>
+              <a href="">Already have an account</a>
+            </Link>
         </div>
     </div>
   )
