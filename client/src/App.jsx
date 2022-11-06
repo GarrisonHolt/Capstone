@@ -9,19 +9,20 @@ import Login from './pages/login/Login'
 import Create from './pages/create/Create'
 import Profile from './pages/profile/Profile'
 import Single from './pages/singlePost/Single'
+// import { Switch } from '@headlessui/react';
 
 
 
 function App() {
-  const { user } = false
+  const { user } = true
   return (
     <Router>
       <Routes>
         <Route exact path="/" element={<Home />} />
-        <Route path="/register" element={user ? <Home/> : <Register/> }/>
-        <Route path="/login" element={user ? <Home/> : <Login/> }/>
-        <Route path="/create" element={user ? <Create/> : <Register/> }/>
-        <Route path="/profile" element={user ? <Profile/> : <Register/> }/>
+        <Route path="/register" element={<Register/> }/>
+        <Route path="/login" element={<Login/> }/>
+        <Route path="/create" element={<Create/> }/>
+        <Route path="/profile" element={<Profile/>}/>
         <Route path="/posts/:id" element={<Single />}/>
       </Routes>
     </Router>
