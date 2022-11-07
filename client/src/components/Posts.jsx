@@ -1,10 +1,12 @@
 import React from 'react'
 import Post from './Post'
 
-const Posts = () => {
+const Posts = ({posts}) => {
   return (
     <div className='flex-9'>
-      <Post />
+      {posts.map((p) => (
+         <Post post={p}/>
+      ))}
     </div>
   )
 }
