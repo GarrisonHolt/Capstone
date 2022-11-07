@@ -25,12 +25,12 @@ const NavBar = () => {
           </Link>
         </ul>
       </div>
-      {/* <div className='pt-2 relative ml-5 text-gray-800'>
-        <input className='border-2 border-gray-300 bg-white h-10 w-20px px-5 rounded-lg text-sm focus:outline-none' type="search" name="search" placeholder="search" />
-      </div> */}
-      <div className='flex ml-[5%] mr-[18%] items-center justify-center'>
-        <img src="" alt="" className='w-[40px] h-[40px] rounded-full object-cover cursor-pointer'/>
-      </div>  
+      
+        <div className='flex ml-[5%] mr-[18%] items-center justify-center'>
+      <Link to={"/profile"}>
+          <img src="" alt="" className='w-[40px] h-[40px] rounded-full object-cover cursor-pointer'/>
+      </Link>
+        </div>  
     </div>
   )
 }
