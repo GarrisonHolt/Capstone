@@ -11,7 +11,7 @@ import userRoutes from "./routes/userRoutes.js"
 
 dotenv.config();
 const app = express();
-const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT || 8000 || "https://capstone-oxk6wfmly-garrisonholt.vercel.app/";
 const CONNECTION_URL = process.env.MONGO_URL
 const storage = multer.diskStorage({
     destination:(req, file, cb) => {
