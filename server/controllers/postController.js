@@ -1,6 +1,5 @@
 import express from "express";
 import mongoose from "mongoose";
-
 import Post from "../models/postModel.js";
 
 const router = express.Router();

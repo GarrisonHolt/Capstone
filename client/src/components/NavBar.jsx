@@ -5,7 +5,6 @@ import Create from '../pages/create/Create'
 import Login from '../pages/login/Login'
 
 
-
 const NavBar = () => {
   return (
     <div className='w-100 h-[60px] bg-gray-800 sticky top-0 flex items-center font-serif'>
@@ -28,7 +27,7 @@ const NavBar = () => {
       
         <div className='flex ml-[5%] mr-[18%] items-center justify-center'>
       <Link to={"/profile"}>
-          <img src="" alt="" className='w-[40px] h-[40px] rounded-full object-cover cursor-pointer'/>
+          <img src='' alt="" className='w-[40px] h-[40px] rounded-full object-cover cursor-pointer'/>
       </Link>
         </div>  
     </div>

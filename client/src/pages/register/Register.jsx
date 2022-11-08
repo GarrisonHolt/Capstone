@@ -2,19 +2,23 @@ import React, {useState} from 'react'
 import Login from '../login/Login'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
+import {Upload} from "upload-js"
 
 
 const Register = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const[profilePicture, setProfilePicture] = useState('');
   const [error, setError] = useState(false);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
       setError();
       const res = await axios.post("/auth/register", {
         username, 
-        password, 
+        password,
+        profilePicture, 
       });
       res.data && window.location.replace("/login")
     } catch (error) {
@@ -45,7 +49,7 @@ const Register = () => {
                     <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Upload Profile Pic</label>
                     <input type="file"
                     className="block w-[50%] ml-[25%] text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" 
-                    id="file_input"  
+                    id="file_input"
                    />
 
                 </div>

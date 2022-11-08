@@ -21,6 +21,7 @@ const Login = () => {
         username, password
       });
       dispatch({type:"LOGIN_SUCCESS", payload:res.data})
+      window.location.replace("/")
     } catch (error) {
       dispatch({type:"LOGIN_FAILURE"})
     }
