@@ -33,9 +33,10 @@ export const login = async (req, res) => {
         const validated = await bcrypt.compare(req.body.password, user.password);
         !validated && res.status(400).json({message: "Wrong credentials"});
 
-        res.status(201).json({ message: "Login Successful" })
+        res.status(201).json({ message: "Login Successful"})
+        const userId =  user._id
     } catch (error) {
-        res.status(500).json(error)
+    
     }
 }
 
